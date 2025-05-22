@@ -1,6 +1,3 @@
-#def get_book_count(book_text):
-    #"""Counts the total number of words in a text file."""
-    # return len(book_text.split()) 
 def get_book_text(file_path):
     """Reads the content of a book file and returns it as a string."""
     with open(file_path) as f:
