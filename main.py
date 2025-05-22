@@ -11,7 +11,7 @@ def main():
         book_count = get_book_count(book_text)
         char_count = get_char_count(book_text)
         print(f"{book_count} words found in the document")
-        for char, count in sorted(char_count.items(), key=lambda item: item[1], reverse=True):
+        for char, count in char_count.items():
             print(f"'{char}': {count}")
     except FileNotFoundError:
         print("Error: File not found. Please check the path and try again.")
