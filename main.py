@@ -26,6 +26,7 @@ def main():
             if char["char"].isalpha():
                 print(f"{char['char']}: {char['num']}")
         print("============= END ===============")
+        #commented out old code from lesson
         #print(f"{book_count} words found in the document")
         #for char, count in char_count.items():
             #print(f"'{char}': {count}")
