@@ -13,7 +13,7 @@ def get_char_count(book_text):
         else:
             char_count[char_lower] = 1
     return char_count
-
+#commented out old code from lesson
 #def sort_on(dict):
     #return dict["num"]
 #char_count = get_char_count(book_text)
@@ -21,9 +21,12 @@ def get_char_count(book_text):
 #for key, value in char_count.items():
     #sorted = {"char": key, "num": value}
     #sorted_chars.append(sorted)
+
 def sort_on(dict):
+    #sorts a dictionary by the "num" key
     return dict["num"]
 def processed_chars(char_count):
+    #"""Processes the character count dictionary into a list of dictionaries sorted by count."""
     processed_list = []
     for key, value in char_count.items():
         sorted = {"char": key, "num": value}
