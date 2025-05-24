@@ -5,14 +5,25 @@ def get_book_text(file_path):
     return (book_text)
 from stats import get_char_count
 from stats import get_book_count
+from stats import processed_chars
 def main():
     try:
         book_text = get_book_text("books/frankenstein.txt")
         book_count = get_book_count(book_text)
         char_count = get_char_count(book_text)
-        print(f"{book_count} words found in the document")
-        for char, count in char_count.items():
-            print(f"'{char}': {count}")
+        sorted_chars = processed_chars(char_count)
+        print("============ BOOKBOT ============")
+        print("Analyzing book found at books/frankenstein.txt...")
+        print("----------- Word Count ----------")
+        print(f"Found {book_count} total words")
+        print("--------- Character Count -------")
+        for char in sorted_chars:
+            if char["char"].isalpha():
+                print(f"{char['char']}: {char['num']}")
+        print("============= END ===============")
+        #print(f"{book_count} words found in the document")
+        #for char, count in char_count.items():
+            #print(f"'{char}': {count}")
     except FileNotFoundError:
         print("Error: File not found. Please check the path and try again.")
         return
